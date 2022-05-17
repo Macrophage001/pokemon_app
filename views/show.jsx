@@ -8,16 +8,12 @@ const Show = ({ pokemon }) => {
         justifyContent: 'center'
     }
 
-    pokemon.forEach(p => {
-        p.name = p.name[0].toUpperCase() + p.name.slice(1);
-    });
-
     return (
         <div>
-            <h1 style={headerStyle}>Pokedex - See all our Pokemon!</h1>
-            <ul>
-                {pokemon.map((p, i) => <li style={listElementStyle}><h2>{p.name}</h2><img src={p.img} alt="pokemon" width={'25vw'} height={'25vh'}/> <a href={`/pokemon/${i}`}>Show More...</a> </li> )}
-            </ul>
+            <h1 style={headerStyle}>Gotta Catch 'Em All!</h1>
+            <h2>{ pokemon.name }</h2>
+            <img src={pokemon.img} alt="pokemon" />
+            <a href="/pokemon">Back</a>
         </div>
     )
 }

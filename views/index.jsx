@@ -10,6 +10,10 @@ const Index = ({ pokemon }) => {
 
     pokemon.forEach(p => {
         p.name = p.name[0].toUpperCase() + p.name.slice(1);
+        if (!p.img.includes('.jpg')) {
+            p.img = p.img + '.jpg';
+        }
+        console.log(p.img); 
     });
 
     return (
