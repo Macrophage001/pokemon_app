@@ -13,7 +13,7 @@ app.get('/', (req, resp) => {
 });
 
 app.get('/pokemon', (req, resp) => {
-    resp.render('index');
+    resp.render('index', { pokemon });
 });
 
 app.listen(port, () => console.log('Listening on port: ' + port));
